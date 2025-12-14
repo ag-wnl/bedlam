@@ -5,17 +5,17 @@ A chaos engineering library that randomly rejects API fetch requests to test you
 ## Installation
 
 ```bash
-npm install bedlam
+npm install @agwnl/bedlam
 # or
-pnpm add bedlam
+pnpm add @agwnl/bedlam
 # or
-yarn add bedlam
+yarn add @agwnl/bedlam
 ```
 
 ## Usage
 
 ```typescript
-import { enableChaos, disableChaos } from "bedlam";
+import { enableChaos, disableChaos } from "@agwnl/bedlam";
 
 // Enable chaos mode
 enableChaos({
@@ -38,7 +38,7 @@ disableChaos();
 ## Example
 
 ```typescript
-import { enableChaos } from 'bedlam';
+import { enableChaos } from "@agwnl/bedlam";
 
 // Enable chaos in development
 if (process.env.NODE_ENV === 'development') {

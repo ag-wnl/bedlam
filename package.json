@@ -1,5 +1,5 @@
 {
-  "name": "bedlam",
+  "name": "@agwnl/bedlam",
   "version": "1.0.0",
   "description": "A chaos engineering library that randomly rejects API fetch requests to test site reliability",
   "main": "./dist/index.js",
@@ -39,8 +39,8 @@
     "reliability",
     "network-error"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Agnideep Ghosh",
+  "license": "MIT",
   "packageManager": "pnpm@10.4.1",
   "devDependencies": {
     "@types/node": "^25.0.2",
