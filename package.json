@@ -1,19 +1,50 @@
 {
   "name": "bedlam",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "tsc --noEmit --watch"
+  "description": "A chaos engineering library that randomly rejects API fetch requests to test site reliability",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./browser": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.global.js"
+    }
   },
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "chaos-engineering",
+    "fetch",
+    "api",
+    "testing",
+    "reliability",
+    "network-error"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
   "devDependencies": {
     "@types/node": "^25.0.2",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
 }
